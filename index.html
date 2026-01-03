@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>媽媽生日快樂 | 家之長卷</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importing 'Ma Shan Zheng' for Calligraphy and 'Noto Serif TC' for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+TC:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              paper: '#F9F4E8',
+              ink: '#2B2B2B',
+              seal: '#B22222',
+            },
+            fontFamily: {
+              serif: ['"Noto Serif TC"', 'serif'],
+              calligraphy: ['"Ma Shan Zheng"', 'cursive'],
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'ripple': 'ripple 3s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              ripple: {
+                '0%': { transform: 'scale(1)', opacity: '0.4' },
+                '100%': { transform: 'scale(2.5)', opacity: '0' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #F9F4E8;
+        color: #2B2B2B;
+        overflow-x: hidden;
+      }
+      /* Custom scrollbar to match aesthetic */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #F9F4E8; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #D1C4B0; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #B22222; 
+      }
+      .vertical-text {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
